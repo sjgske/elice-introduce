@@ -155,11 +155,15 @@ body {
 .article {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 200ms ease;
+  transition: max-height 300ms ease;
 }
 
 .article h3 {
   font-size: 16px;
+}
+
+.article p {
+  font-size: 14px;
 }
 
 .elice img {
