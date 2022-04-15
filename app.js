@@ -1,8 +1,12 @@
 const buttons = document.querySelectorAll(".buttons button");
 
 buttons.forEach((el) => {
-  el.addEventListener("click", () => {
-    el.classList.toggle("active");
+  el.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) {
+      el.classList.remove("active");
+    } else {
+      buttons.forEach((el) => el.classList.remove("active"));
+      el.classList.add("active");
+    }
   });
-  // TODO: 버튼에 마우스오버하면 innerText가 버튼 제목으로 바뀌기
 });
