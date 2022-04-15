@@ -68,7 +68,7 @@ body {
 }
 
 .name a:hover {
-  color: #666;
+  color: rgba(63, 65, 80, 0.8);
 }
 
 .profile {
@@ -108,7 +108,7 @@ body {
 
 .desc {
   font-weight: 700;
-  padding: 0 0 20px;
+  padding: 5px 0 20px;
 }
 
 .desc .fe:hover {
@@ -134,12 +134,8 @@ body {
   text-align: center;
 }
 
-.buttons button.active ~ .article {
-  padding: 5px 10px;
-  max-height: 100px;
-}
-
 .buttons button::after {
+  position: absolute;
   content: ". . .";
   color: transparent;
 }
@@ -152,10 +148,16 @@ body {
   color: #3f4150;
 }
 
+.buttons button.active ~ .article {
+  padding: 5px 10px;
+  max-height: 100px;
+}
+
 .article {
+  padding: 0 10px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 300ms ease;
+  transition: all 300ms ease;
 }
 
 .article h3 {
@@ -169,7 +171,7 @@ body {
 .elice img {
   position: absolute;
   left: 50%;
-  bottom: 40px;
+  bottom: 38px;
   transform: translate(-50%);
   display: block;
   width: 100px;
